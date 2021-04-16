@@ -10,8 +10,9 @@ Script that turns selected text into a note file (nextcloud notes compatible)
 * suggests a date/time based title for taking notes without further thought
 
 ### prerequesits
-* bash
+* bash (should be preinstalled on your box)
 * rofi
+* xclip (should be preinstalled on your box if using an X window environment)
 
 ### installation
 1. make it executable `chmod +x note`
