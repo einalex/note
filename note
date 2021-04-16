@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# configuration
+TARGET_FOLDER=$HOME/Nextcloud/Notes/Snippets
+DATE_FORMAT=seconds
+
+#-----------------
+# code
+mkdir -p $TARGET_FOLDER
+NOTE=`xclip -o`
+DATE=`date -Iseconds`
+TITLES=`ls -1 $TARGET_FOLDER | sed 's/\.[^.]*$//'`
+if [ -z "$TITLES" ]; then
+  MENU_CHOICES=$DATE
+else
+  MENU_CHOICES=$DATE$'\n'$TITLES
+fi
+TITLE=`echo "$MENU_CHOICES" | rofi -dmenu -mesg "$NOTE" -p 'Title'`
+echo "$NOTE" >> "$TARGET_FOLDER/$TITLE.md"
