@@ -27,3 +27,7 @@ Script that turns selected text into a note file (nextcloud notes compatible)
 ### nextcloud integration
 1. install nextcloud client
 2. adjust TARGET_FOLDER variable to some subfolder of `LOCAL_NEXTCLOUD_ROOT/Notes`
+
+
+### Zettelkasten time format
+adjust the `date +Iseconds` part to be `date +%Y%m%e%H%M%S`
